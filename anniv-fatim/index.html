@@ -1,0 +1,291 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Joyeux Anniversaire FATIM 🎉❤️</title>
+<style>
+.emoji-corner {
+    position: fixed; /* toujours visible dans la page */
+    font-size: 80px; /* taille géante */
+    z-index: 1000;   /* au-dessus de tout */
+    pointer-events: none; /* ne bloque pas les clics */
+    animation: floatEmoji 2s ease-in-out infinite alternate;
+}
+
+/* Position des emojis */
+.top-left { top: 20px; left: 20px; }
+.top-right { top: 20px; right: 20px; }
+.bottom-left { bottom: 20px; left: 20px; }
+.bottom-right { bottom: 20px; right: 20px; }
+
+/* Animation flottante */
+@keyframes floatEmoji {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+
+
+.emoji-corner {
+    position: fixed; /* toujours visible dans la page */
+    font-size: 80px; /* taille géante, tu peux augmenter si tu veux */
+    z-index: 1000;   /* au-dessus de tout */
+    pointer-events: none; /* ne bloque pas les clics sur la page */
+}
+
+.emoji-corner.left {
+    top: 20px;
+    left: 20px;
+}
+
+.emoji-corner.right {
+    top: 20px;
+    right: 20px;
+}
+
+/* Optionnel : ajouter une légère animation */
+.emoji-corner {
+    animation: floatEmoji 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatEmoji {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+
+body {
+    background-color: #fff3b0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Texte */
+h1 {
+    font-size: 3em;
+    color: #ff3399;
+    margin-bottom: 0.5em;
+}
+p {
+    font-size: 1.5em;
+    color: #ff6666;
+}
+.emoji {
+    font-size: 2em;
+    animation: bounce 1s infinite;
+}
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Confettis */
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+.confetti-piece {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+@keyframes fall {
+    0% { transform: translateY(-10px) rotate(0deg); opacity:1; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity:0.8; }
+}
+
+/* Ballons */
+.balloon {
+    position: absolute;
+    bottom: -60px;
+    width: 40px;
+    height: 60px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: floatUp linear infinite, sway 3s ease-in-out infinite alternate;
+}
+@keyframes floatUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-120vh); }
+}
+@keyframes sway {
+    0% { transform: translateX(0) rotate(0deg); }
+    50% { transform: translateX(15px) rotate(10deg); }
+    100% { transform: translateX(0) rotate(-10deg); }
+}
+
+/* Gâteau */
+.cake {
+    position: relative;
+    width: 200px;
+    margin: 20px auto;
+}
+.layer {
+    width: 200px;
+    height: 60px;
+    margin: 6px 0;
+    border-radius: 100px;
+    position: relative;
+    opacity: 0;
+    transform: scale(0.3);
+    animation: appear 3s forwards;
+}
+.layer:nth-child(1) { background: #f8c8dc; animation-delay: 0.5s; }
+.layer:nth-child(2) { background: #d26999; animation-delay: 1.5s; }
+.layer:nth-child(3) { background: #b84c7c; animation-delay: 2.5s; }
+
+.cream {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    right: 10px;
+    height: 25px;
+    background: #fff0f8;
+    border-radius: 50px;
+}
+.candle {
+    width: 14px;
+    height: 70px;
+    background: #87cefa;
+    position: absolute;
+    top: -75px;
+    border-radius: 8px 8px 0 0;
+}
+.flame {
+    width: 14px;
+    height: 20px;
+    background: #ffeb3b;
+    border-radius: 50%;
+    position: absolute;
+    top: -16px;
+    animation: flicker 0.8s infinite alternate;
+}
+@keyframes appear {
+    to { opacity: 1; transform: scale(1); }
+}
+@keyframes flicker {
+    0% { transform: scale(1) rotate(-1deg); }
+    100% { transform: scale(1.15) rotate(1deg); }
+}
+
+/* Feux d’artifice */
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: explode 1s ease-out forwards;
+}
+@keyframes explode {
+    0% { transform: translate(0,0) scale(1); opacity:1; }
+    100% { transform: translate(var(--x), var(--y)) scale(0.5); opacity:0; }
+}
+</style>
+</head>
+<body>
+<!-- Emojis géants aux coins -->
+<div class="emoji-corner top-left">🎉</div>
+<div class="emoji-corner top-right">❤️</div>
+<div class="emoji-corner bottom-left">🥳</div>
+<div class="emoji-corner bottom-right">🎁</div>
+
+
+<!-- Emojis géants aux coins -->
+<div class="emoji-corner left">🎉🎉</div>
+<div class="emoji-corner right">🎉🎉</div>
+
+<!-- Musique douce -->
+<audio id="musique" autoplay loop muted>
+  <source src="bensound-littleidea.mp3" type="audio/mpeg">
+</audio>
+
+<h1>Joyeux Anniversaire FATIM🎉❤️</h1>
+<p>Que cette journée soit remplie de bonheur et de surprises ! 🥳🎂</p>
+<p>Tu es de loin la pire des psychopathe que je connais 😂<br>
+et j'en profite pour te souhaiter un joyeux anniv, c'est la moindre des choses que je puisse faire 🥳🎂</p>
+<div class="emoji">🎈🎁🎊</div>
+
+<!-- Confettis -->
+<div class="confetti" id="confetti"></div>
+
+<!-- Ballons -->
+<div class="balloon" style="left: 10%; background-color:#ff4da6;"></div>
+<div class="balloon" style="left: 30%; background-color:#4da6ff;"></div>
+<div class="balloon" style="left: 50%; background-color:#ffdb4d;"></div>
+<div class="balloon" style="left: 70%; background-color:#33cc33;"></div>
+<div class="balloon" style="left: 90%; background-color:#ff6699;"></div>
+
+<!-- Gâteau -->
+<div class="cake">
+    <div class="layer"><div class="cream"></div></div>
+    <div class="layer"><div class="cream"></div></div>
+    <div class="layer">
+        <div class="cream"></div>
+        <div class="candle" style="left:40px;"><div class="flame"></div></div>
+        <div class="candle" style="left:90px;"><div class="flame"></div></div>
+        <div class="candle" style="left:140px;"><div class="flame"></div></div>
+    </div>
+</div>
+
+<script>
+// Confettis
+const confettiContainer = document.getElementById('confetti');
+const colors = ['#ff3366','#33cc33','#ffcc00','#3366ff','#ff6699','#ff9933'];
+for(let i=0;i<100;i++){
+    const c=document.createElement('div');
+    c.className='confetti-piece';
+    c.style.backgroundColor=colors[Math.floor(Math.random()*colors.length)];
+    c.style.left=Math.random()*100+'vw';
+    c.style.width=5+Math.random()*10+'px';
+    c.style.height=c.style.width;
+    c.style.animationDuration=3+Math.random()*3+'s';
+    c.style.animationDelay=Math.random()*5+'s';
+    confettiContainer.appendChild(c);
+}
+
+// Feux d’artifice
+function launchFirework(x, y){
+    const particles = 20;
+    for(let i=0;i<particles;i++){
+        const f = document.createElement('div');
+        f.className='firework';
+        f.style.left = x+'px';
+        f.style.top = y+'px';
+        const angle = Math.random()*2*Math.PI;
+        const distance = 50 + Math.random()*50;
+        f.style.setProperty('--x', (Math.cos(angle)*distance)+'px');
+        f.style.setProperty('--y', (Math.sin(angle)*distance)+'px');
+        f.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
+        f.style.animationDuration = 1 + Math.random()*0.5 + 's';
+        document.body.appendChild(f);
+        setTimeout(()=>f.remove(),1500);
+    }
+}
+
+// Lancer des feux d’artifice toutes les 2 secondes
+setInterval(()=>{
+    const x = 100 + Math.random()*600;
+    const y = 100 + Math.random()*200;
+    launchFirework(x,y);
+},2000);
+ // Attendre une action de l'utilisateur pour activer le son
+  document.body.addEventListener('click', function() {
+    const audio = document.getElementById('musique');
+    audio.muted = false;
+    audio.play();
+  });
+</script>
+
+</body>
+</html>
